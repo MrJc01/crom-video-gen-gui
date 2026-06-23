@@ -1,0 +1,99 @@
+.jsonEditorContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+}
+
+.editorArea {
+  flex: 1;
+  background-color: #08090c;
+  border: 1px solid var(--input-border);
+  color: #38bdf8;
+  font-family: monospace;
+  font-size: 13px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  resize: none;
+  line-height: 1.5;
+  transition: border-color 0.2s;
+}
+
+.editorArea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.1);
+}
+
+.errorTextarea {
+  border-color: #f87171 !important;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn {
+  flex: 1 1 calc(50% - 4px);
+  min-width: 100px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  border: none;
+}
+
+.btnPrimary {
+  background-color: var(--accent-primary);
+  color: var(--bg-app);
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background-color: #0891b2;
+}
+
+.btnSecondary {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+}
+
+.btnSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.validationStatus {
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusSuccess {
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.statusError {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 11px;
+}
